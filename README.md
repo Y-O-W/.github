@@ -9,9 +9,13 @@ GitHub applies the files in this public repo as defaults to every repo in the ac
 | Path | What it is |
 | --- | --- |
 | `.github/ISSUE_TEMPLATE/user-story.yml` | The **User story** issue form. It is offered under **New issue** in any repo without its own `ISSUE_TEMPLATE` folder. |
-| `.github/ISSUE_TEMPLATE/epic.yml` | The **Epic** issue form: the parent of one deliverable outcome, with goal, done-when criteria, scope, planned sub-issues and roadmap. Offered the same way. |
+| `.github/ISSUE_TEMPLATE/epic.yml` | The **Epic** issue form: the parent of one deliverable outcome, with goal, done-when criteria, scope, planned sub-issues and roadmap. Offered the same way, and sets the issue type **Epic**. |
 
 A repo that has its own issue templates shows only those. The defaults do not merge with them.
+
+## Issue types
+
+The Epic form sets the issue type `Epic`, which must exist on the account (Settings → Planning → Issue types) or via `gh api -X POST user/issue-types -f name=Epic -f color=purple -F is_enabled=true`. Issue types are account-level, so no per-repo setup is needed.
 
 ## Labels
 

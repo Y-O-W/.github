@@ -1,6 +1,7 @@
 name: Epic
 description: Parent issue for one deliverable outcome that several sub-issues build toward.
 title: "Epic: "
+type: Epic
 labels: ["epic"]
 body:
   - type: markdown
