@@ -1,0 +1,102 @@
+name: Epic
+description: Parent issue for one deliverable outcome that several sub-issues build toward.
+title: "Epic: "
+labels: ["epic"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        An epic is the parent of one deliverable outcome, usually weeks of work and three or more sub-issues. Smaller work is a single issue. Lead with why and when it is done, link the spec instead of copying it, and leave owners, priority, effort and dates empty unless they are decided. Paraphrase external text and link the source; do not paste secrets or customer data.
+
+        Once the sub-issues exist, link them as native sub-issues and replace the planned list with the roadmap table. Do not keep a checkbox list of them: GitHub shows the progress itself.
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: The problem or opportunity and why now, in one or two sentences, in user or business terms. Not a task list.
+    validations:
+      required: true
+  - type: textarea
+    id: done-when
+    attributes:
+      label: Done when
+      description: Two to five exit criteria, each checkable by a test, a command or an observation. Name the source where there is one (for example SC-001).
+      placeholder: |
+        - [ ] A new user finishes signup in under 2 minutes (SC-001)
+        - [ ] All P1 acceptance scenarios pass in CI
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What is in, at capability level.
+    validations:
+      required: true
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: What this epic does not cover, so it can be added later as its own issue or epic.
+    validations:
+      required: true
+  - type: dropdown
+    id: source-type
+    attributes:
+      label: Source type
+      options:
+        - OpenSpec
+        - SpecKit
+        - Plan session
+        - Research
+        - None yet
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source of truth
+      description: Path or link to the spec, change folder or plan. The source wins over this issue; change it first, then the epic. For a plan session, say that the criteria were inferred from the plan.
+  - type: textarea
+    id: decisions
+    attributes:
+      label: Definitions and decisions
+      description: Terms the sub-issues share, and decisions already made with the reason and the date. Only what an agent cannot find in the code or docs.
+  - type: textarea
+    id: planned-issues
+    attributes:
+      label: Planned sub-issues
+      description: One line per issue still to be created, with what it delivers and what it depends on. Slice by outcome, not by layer. Leave priority, effort and owner empty unless decided.
+      placeholder: |
+        - [ ] **Data schema**: stack.yml with the fields per tool. Depends on: none
+        - [ ] **Check script**: fails on unknown references. Depends on: data schema
+  - type: textarea
+    id: roadmap
+    attributes:
+      label: Roadmap
+      description: Waves, from the dependencies. Wave 1 has no dependencies and runs in parallel. Replace with a table of real issue numbers once the issues exist.
+      placeholder: |
+        | Wave | Issue | Owner | Needs |
+        | --- | --- | --- | --- |
+        | 1 (parallel) | #n title | unassigned | none |
+        | 2 | #n title | unassigned | #n |
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks and open questions
+      description: Only real ones. Mark open items NEEDS CLARIFICATION.
+  - type: textarea
+    id: owner-decisions
+    attributes:
+      label: Decisions that need the owner
+      description: Choices that block or shape the sub-issues and must not be guessed.
+  - type: textarea
+    id: automation
+    attributes:
+      label: Project automation
+      description: Which project workflows run by themselves (auto-add sub-issues, status on add, close and archive) and what is done by hand.
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Notes, research and sources, as links.

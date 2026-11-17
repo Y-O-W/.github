@@ -9,6 +9,7 @@ GitHub applies the files in this public repo as defaults to every repo in the ac
 | Path | What it is |
 | --- | --- |
 | `.github/ISSUE_TEMPLATE/user-story.yml` | The **User story** issue form. It is offered under **New issue** in any repo without its own `ISSUE_TEMPLATE` folder. |
+| `.github/ISSUE_TEMPLATE/epic.yml` | The **Epic** issue form: the parent of one deliverable outcome, with goal, done-when criteria, scope, planned sub-issues and roadmap. Offered the same way. |
 
 A repo that has its own issue templates shows only those. The defaults do not merge with them.
 
@@ -19,6 +20,7 @@ Labels are per repo and do not come from this repo. The form applies the `user-s
 | Label | Description | Color |
 | --- | --- | --- |
 | `user-story` | label for a user story based on the issue template | `#0533bd` |
+| `epic` | parent issue for one deliverable outcome | `#3e4b9e` |
 
 Recreate the label set in another repo by cloning it from the profile repo:
 
