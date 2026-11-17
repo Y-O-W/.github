@@ -8,7 +8,7 @@ GitHub applies the files in this public repo as defaults to every repo in the ac
 
 | Path | What it is |
 | --- | --- |
-| `ISSUE_TEMPLATE/user-story.yml` | The **User story** issue form. It is offered under **New issue** in any repo without its own `ISSUE_TEMPLATE` folder. |
+| `.github/ISSUE_TEMPLATE/user-story.yml` | The **User story** issue form. It is offered under **New issue** in any repo without its own `ISSUE_TEMPLATE` folder. |
 
 A repo that has its own issue templates shows only those. The defaults do not merge with them.
 
