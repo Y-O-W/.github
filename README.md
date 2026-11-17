@@ -23,8 +23,10 @@ Labels are per repo and do not come from this repo. The form applies the `user-s
 Recreate the label set in another repo by cloning it from the profile repo:
 
 ```sh
-gh label clone Y-O-W/Y-O-W --repo Y-O-W/<repo>
+scripts/clone-labels.sh <repo> [<repo>...]
 ```
+
+The script wraps `gh label clone Y-O-W/Y-O-W --repo Y-O-W/<repo> --force`.
 
 The profile repo also carries GitHub's default labels (`bug`, `documentation`, `duplicate`, `enhancement`, `good first issue`, `help wanted`, `invalid`, `question`, `wontfix`), which the clone copies too.
 
